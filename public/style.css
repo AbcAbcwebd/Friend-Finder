@@ -1,0 +1,17 @@
+.input-slider {
+	width: 200px;
+	margin-left: 100px;
+}
+
+.survey-form {
+	width: 500px;
+	background: pink;
+}
+
+.diss {
+	float: left;
+}
+
+.agr {
+	float: right;
+}
