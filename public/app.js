@@ -55,23 +55,7 @@ $( document ).ready(function() {
 	    });
 
 	});
-/*
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-	    $('#display-modal').css('display', "none");
-	};
 
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-	    if (event.target == modal) {
-	        $('#display-modal').css('display', "none");
-	    }
-	};
-
-	$("#close-window").click(function(){
-		$('#display-modal').css('display', "none");
-	});
-*/
 	$('body').on('click', 'span.close', function(){
 		$('#display-modal').css('display', "none");
 	});
