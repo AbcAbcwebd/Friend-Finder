@@ -12,3 +12,26 @@ function generateQuiz(quiz){
 		  
 	});
 };
+
+$( document ).ready(function() {
+    $("#submit-survey-btn").click(function(){
+    	event.preventDefault();
+    	var userName = $('#name-input').val();
+    	var userImage = $('#photo-input').val();
+    	var quizAnswers = [];
+	    $('.input-slider').each(function() {
+	    	quizAnswers.push($(this).val());
+	    });
+	    var resultObj = {
+	    	name: userName,
+	    	imageURL: userImage,
+	    	surveyResults: quizAnswers
+	    };
+
+	    $.post('http://localhost:3000/recieve-reservation',resObj,function() {
+	    	console.log("Record sent");
+	    });
+
+	    window.location.href = "tables.html"; */
+	});
+});

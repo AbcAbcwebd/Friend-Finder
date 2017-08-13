@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Home -- Cuddle Up</title>
+	<title>Survey -- Cuddle Up</title>
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<script src="/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="reset.css">
@@ -12,7 +12,12 @@
 <body>
 	<h2>Main Survey</h2>
 	<form id="survey-form">
+	<p>Your name:</p>
+	<input type="text" id="name-input">
+	<p>Photo URL:</p>
+	<input type="text" id="photo-input">
 	</form>
+	<button id="submit-survey-btn">Submit</button>
 	<script type="text/javascript">
 		generateQuiz('basicSurvey');
 	</script>
