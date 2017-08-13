@@ -16,6 +16,7 @@ function generateQuiz(quiz){
 $( document ).ready(function() {
     $("#submit-survey-btn").click(function(){
     	event.preventDefault();
+    	console.log($('#male-box').val());
     	var userName = $('#name-input').val();
     	var userImage = $('#photo-input').val();
     	var quizAnswers = [];

@@ -8,7 +8,7 @@ var index = require('./routing/htmlRoutes.js');
 app.use('/', index);
 var jsonLinking = require('./routing/apiRoutes.js');
 app.use('/', jsonLinking);
-app.use('/api/friends', jsonLinking);
+// app.use('/api/friends', jsonLinking);
 
 var PORT = 3000;
 
