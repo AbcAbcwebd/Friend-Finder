@@ -55,3 +55,15 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+#home-body {
+	background: url('/images/love.jpg');
+
+	/* Full height */
+ /*   height: 100%; */
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
