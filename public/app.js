@@ -16,9 +16,16 @@ function generateQuiz(quiz){
 $( document ).ready(function() {
     $("#submit-survey-btn").click(function(){
     	event.preventDefault();
-    	console.log($('#male-box').val());
     	var userName = $('#name-input').val();
     	var userImage = $('#photo-input').val();
+    	var userGender = $('#gender-select').val();
+    	console.log(userGender)
+    	var desiredGenders = [];
+    	$('input[name="preference"]').each(function() {
+	    	if ($(this).is(':checked')){
+	    		desiredGenders.push($(this).val());
+	    	}
+	    });
     	var quizAnswers = [];
 	    $('.input-slider').each(function() {
 	    	quizAnswers.push($(this).val());
@@ -26,6 +33,8 @@ $( document ).ready(function() {
 	    var resultObj = {
 	    	name: userName,
 	    	imageURL: userImage,
+	    	gender: userGender,
+	    	desiredGenders: desiredGenders,
 	    	surveyResults: quizAnswers
 	    };
 

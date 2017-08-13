@@ -27,10 +27,14 @@ app.post('/api/friends', function(req, res) {
     // Recieves and saves the new quiz data
     var localName = req.body.name;
     var localImage = req.body.imageURL;
+    var localGender = req.body.gender;
+    var localDesiredGenders = req.body.desiredGenders;
     var localAnswers = req.body.surveyResults;
     var userObj = {
     	name: localName,
     	image: localImage,
+    	gender: localGender,
+    	desiredGenders: localDesiredGenders,
     	answers: localAnswers
     };
     allSurveyResults.push(userObj);
