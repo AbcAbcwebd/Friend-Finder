@@ -6,6 +6,8 @@ var app = express();
 var bodyParser = require('body-parser');
 var index = require('./routing/htmlRoutes.js');
 app.use('/', index);
+var jsonLinking = require('./routing/apiRoutes.js');
+app.use('/', jsonLinking);
 
 var PORT = 3000;
 
@@ -16,14 +18,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-// YOUR CODE GOES HERE
-app.get("/api/reservations", function (req, res) {
-    res.json(reservations);
-});
 
-app.get("/api/wait-list", function (req, res) {
-    res.json(waitList);
-});
 
 
 
