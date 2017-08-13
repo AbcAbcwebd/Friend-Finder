@@ -28,7 +28,7 @@ $( document ).ready(function() {
 	    	surveyResults: quizAnswers
 	    };
 
-	    $.post('http://localhost:3000/api/friends',JSON.stringify(resultObj),function() {
+	    $.post('http://localhost:3000/api/friends',resultObj,function() {
 	    	console.log("Record sent");
 	    });
 
