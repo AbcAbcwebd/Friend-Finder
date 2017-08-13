@@ -8,6 +8,7 @@ var index = require('./routing/htmlRoutes.js');
 app.use('/', index);
 var jsonLinking = require('./routing/apiRoutes.js');
 app.use('/', jsonLinking);
+var allSurveyResults = [];
 
 var PORT = 3000;
 
@@ -24,21 +25,17 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 
 
-app.post('/recieve-reservation', function(req, res) {
+app.post('/recieve-survey-results', function(req, res) {
     var localName = req.body.name;
-    var localPhone = req.body.phone;
-    var localEmail = req.body.email;
-    var customerObj = {
+    var localImage = req.body.imageURL;
+    var localAnswers = req.body.surveyResults;
+    var userObj = {
     	name: localName,
-    	phone: localPhone,
-    	email: localEmail
+    	image: localImage,
+    	answers: localAnswers
     };
-    if (reservations.length < 6){
-    	reservations.push(customerObj);
-    } else {
-    	waitList.push(customerObj);
-    };
-    console.log(reservations)
+    allSurveyResults.push(userObj);
+    console.log(allSurveyResults);
     res.sendStatus(200);
 });
 

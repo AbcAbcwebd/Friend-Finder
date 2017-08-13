@@ -28,10 +28,9 @@ $( document ).ready(function() {
 	    	surveyResults: quizAnswers
 	    };
 
-	    $.post('http://localhost:3000/recieve-reservation',resObj,function() {
+	    $.post('http://localhost:3000/recieve-survey-results',resultObj,function() {
 	    	console.log("Record sent");
 	    });
 
-	    window.location.href = "tables.html"; */
 	});
 });
