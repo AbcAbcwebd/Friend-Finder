@@ -38,8 +38,9 @@ $( document ).ready(function() {
 	    	surveyResults: quizAnswers
 	    };
 
-	    $.post('http://localhost:3000/api/friends',resultObj,function() {
+	    $.post('http://localhost:3000/api/friends',resultObj,function(response) {
 	    	console.log("Record sent");
+	    	console.log(response);
 	    });
 
 	});
