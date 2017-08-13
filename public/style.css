@@ -4,16 +4,27 @@
 }
 
 #survey-form {
-	width: 500px;
-	background: pink;
+	width: 80%;
+	max-width: 500px;
+	margin-left: auto;
+    margin-right: auto;
+    background: #939393;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .diss {
 	float: left;
+	font-size: 12px;
+	color: black;
 }
 
 .agr {
 	float: right;
+	font-size: 12px;
+	color: black;
 }
 
 
@@ -60,7 +71,7 @@
 	background: url('/images/love.jpg');
 }
 
-h1, p {
+h1, h2, p {
 	font-family: 'Merriweather', serif;
 	text-align: center;
 	color: white;
@@ -68,6 +79,10 @@ h1, p {
 
 h1 {
 	font-size: 45px;
+}
+
+h2 {
+	font-size: 35px;
 }
 
 p {
@@ -98,4 +113,54 @@ p {
 
 #survey-link {
 	background: pink;
+}
+
+#survey-body {
+	background: #f7def2;
+}
+
+.question {
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	color: black;
+}
+
+#survey-header {
+	margin: 30px 10px 10px 10px;
+	color: black;
+}
+
+#submit-survey-btn {
+	padding: 5px 10px 5px 10px;
+	background: pink;
+	color: black;
+	font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+    font-family: 'Merriweather', serif;
+}
+
+.special-label {
+	text-align: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.modal-content h1, .modal-content h2 {
+	color: black;
+	margin-top: 10px;
+}
+
+.modal-content img {
+	width: 50%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 	margin-top: 20px;
 }

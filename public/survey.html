@@ -9,23 +9,23 @@
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-	<h2>Main Survey</h2>
+<body id="survey-body">
+	<h2 id="survey-header">Main Survey</h2>
 	<form id="survey-form">
-	<p>Your name:</p>
-	<input type="text" id="name-input">
-	<p>Photo URL:</p>
-	<input type="text" id="photo-input">
-	<p>I'm a...</p>
-	<select id="gender-select">
+	<p class='special-label'>Your name:</p>
+	<input type="text" id="name-input" class='special-label'>
+	<p class='special-label'>Photo URL:</p>
+	<input type="text" id="photo-input" class='special-label'>
+	<p class='special-label'>I'm a...</p>
+	<select id="gender-select" class='special-label'>
 	  <option value="male">Male</option>
 	  <option value="female">Female</option>
 	  <option value="other">Other</option>
 	</select>
-	<p>Seeking...</p>
-	<input type="checkbox" name="preference" value="male">Male<br>
-    <input type="checkbox" name="preference" value="female" checked>Female<br>
-    <input type="checkbox" name="preference" value="other" checked>Other<br>
+	<p class='special-label'>Seeking...</p>
+	<input type="checkbox" name="preference" value="male" class='special-label'>Male<br>
+    <input type="checkbox" name="preference" value="female" checked class='special-label'>Female<br>
+    <input type="checkbox" name="preference" value="other" class='special-label' checked>Other<br>
 	</form>
 	<button id="submit-survey-btn">Submit</button>
 
