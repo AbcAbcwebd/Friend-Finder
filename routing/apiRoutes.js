@@ -3,6 +3,7 @@ var path = require('path');
 var app = express();
 var quizObj = require('./../data/quizes.js')
 
+var seedData = require('./../data/seed-data.js');
 var allSurveyResults = [];
 
 var express = require("express");
@@ -14,6 +15,10 @@ app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
+
+app.get('/api/seed-data', function(req,res){
+    res.json(seedData);
+});
 
 app.get('/api/quizes', function(req,res){
 	res.json(quizObj);
@@ -38,7 +43,6 @@ app.post('/api/friends', function(req, res) {
     	answers: localAnswers
     };
     allSurveyResults.push(userObj);
-    console.log(allSurveyResults)
 
     // Finds best match
     
