@@ -28,6 +28,22 @@
     <input type="checkbox" name="preference" value="other" checked>Other<br>
 	</form>
 	<button id="submit-survey-btn">Submit</button>
+
+	<!-- Modal -->
+	<!-- The Modal -->
+	<div id="display-modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close" id="close-window">&times;</span>
+	    <h2>Your beest match:</h2>
+	    <h1 id='match-name'></h1>
+	    <img src='' id='match-image'>
+	  </div>
+
+	</div>
+
+
 	<script type="text/javascript">
 		generateQuiz('basicSurvey');
 	</script>

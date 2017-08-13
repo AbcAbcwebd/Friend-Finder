@@ -1,3 +1,10 @@
+// Get the modal
+var modal = document.getElementById('display-modal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
 function generateQuiz(quiz){
 	$.ajax({
 	      url: '/api/quizes',
@@ -41,7 +48,31 @@ $( document ).ready(function() {
 	    $.post('http://localhost:3000/api/friends',resultObj,function(response) {
 	    	console.log("Record sent");
 	    	console.log(response);
+	    	console.log($('#display-modal'));
+	    	$('#display-modal').css('display', "block");
+	    	$('#match-name').text(response.name);
+	    	$('#match-image').attr('src', response.image);
 	    });
 
+	});
+/*
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    $('#display-modal').css('display', "none");
+	};
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        $('#display-modal').css('display', "none");
+	    }
+	};
+
+	$("#close-window").click(function(){
+		$('#display-modal').css('display', "none");
+	});
+*/
+	$('body').on('click', 'span.close', function(){
+		$('#display-modal').css('display', "none");
 	});
 });
